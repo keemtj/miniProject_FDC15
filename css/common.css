@@ -47,6 +47,11 @@ a {
     clip-path: polygon(0, 0);
     overflow: hidden;
 }
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 
 /* css 작성 순서
