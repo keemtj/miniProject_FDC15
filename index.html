@@ -7,35 +7,63 @@
     <meta name="author" content="debugging">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이디야(Ediya)</title>
+    <link rel="stylesheet" href="./css/nav.css">
 </head>
 <body>
+    <!-- 헤더 시작 -->
     <header class="header">
-        <h1 class="header__brandName"></h1>
-        <button class="nav__btnBurger"></button>
+
+        <!-- 이디야 로고 -->
+        <h1 class="header__brandName">
+            <img src="./images/ediya-logo.gif" alt="이디야 로고">
+        </h1>
+        <!-- // 이디야 로고 끝 -->
+
+        <!-- 햄버거 버튼 시작-->
+        <button class="nav__btnBurger">
+            <img src="./images/navigation-button.gif" alt="내비게이션 버튼">
+        </button>
+        <!-- // 햄버거 버튼 끝 -->
+
+        <!-- 내비게이션 시작 -->
         <nav class="nav">
             <h2 class="allyHidden">내비게이션</h2>
+
+            <!-- 내비 메뉴 시작 -->
             <ul class="nav__mainNav">
                 <li>
-                    <a href="">메뉴</a>
+                    <a href="#">메뉴</a>
                 </li>
                 <li>
-                    <a href="">이디야멤버스</a>
+                    <a href="#">이디야멤버스</a>
                 </li>
                 <li>
-                    <a href="">이디야커피랩</a>
+                    <a href="#">이디야커피랩</a>
                 </li>
                 <li>
-                    <a href="">이디야컬쳐랩</a>
+                    <a href="#">이디야컬쳐랩</a>
                 </li>
                 <li>
-                    <a href="">공지사항</a>
+                    <a href="#">공지사항</a>
                 </li>
                 <li>
-                    <a href="">매장찾기</a>
+                    <a href="#">매장찾기</a>
                 </li>
             </ul>
-            <button class="nav__btnClosed"></button>
+            <!-- // 내비 메뉴 끝 -->
+
+            <!-- 내비 X 버튼 시작 -->
+            <button class="nav__btnClosed">
+                <span class="burgerBar positionSlash"></span>
+                <span class="burgerBar positionBackslash"></span>
+            </button>
+            <!-- // 내비 X 버튼 끝 -->
+
         </nav>
+        <!-- // 내비게이션 끝 -->
+
     </header>
+    <!-- // 헤더 종료 -->
+
 </body>
 </html>
