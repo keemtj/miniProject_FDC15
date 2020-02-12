@@ -1,77 +1,61 @@
 @charset "utf-8";
 
-/* css 작성 순서
-1.	display, visible
-2.	float
-3.	position
-4.	width, height
-5.	margin, padding
-6.	font (font-weight, font-size…)
-7.	color, line-height, word, vertical-align
-8.	text (text-indent, text-decoration..)
-9.	border
-10.	background
-11.	overflow
-12.	opacity
-13.	box (box-sizing, box-shadow)
-14.	z-index
-15.	transition
-16.	animation */
-
 /* 메인 */
 /* 메인 메뉴리스트 */
+
 .main__menuList {
     display: flex;
     flex-flow: row wrap;
-    width: 840px;
+    width: 100%;
+    max-width: 840px;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 62px;
+    justify-content: center;
 }
-@media ( max-width: 839px ) {
-    .main__menuList {
-        width: 400px;
-        height: auto;
-        margin: 0 auto;
-        margin-bottom: 62px;
-    }
-}
-.main__menuList li{
+.main__menuList li {
     position: relative;
-    width: 400px;
-    min-width: 350px;
-    height: 361px;
-    margin: 5px;
-    background: #f5f5f5;
-    cursor: pointer;
+    width: 50%;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 5px;
     animation-name: slideUp;
-    animation-duration: 1s;
+    animation-duration: .8s;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
 }
+@media ( max-width: 559px ) {
+    .main__menuList li {
+        width: 100%;
+    }
+}
+@media (min-width:560px) and (max-width:840px) {
+    .main__menuList li {
+        width: 50%;
+    }
+}
 .main__menuList li:nth-child(1) {
-    animation-delay: 1150ms;
+    animation-delay: 900ms;
 }
 .main__menuList li:nth-child(2) {
-    animation-delay: 1300ms;
+    animation-delay: 1050ms;
 }
 .main__menuList li:nth-child(3) {
-    animation-delay: 1450ms;
+    animation-delay: 1200ms;
 }
 .main__menuList li:nth-child(4) {
-    animation-delay: 1600ms;
+    animation-delay: 1350ms;
 }
 .main__menuList li:nth-child(5) {
-    animation-delay: 1750ms;
+    animation-delay: 1500ms;
 }
 .main__menuList li:nth-child(6) {
-    animation-delay: 1900ms;
+    animation-delay: 1650ms;
 }
 .main__menuList li:nth-child(7) {
-    animation-delay: 1150ms;
+    animation-delay: 1800ms;
 }
 .main__menuList li:nth-child(8) {
-    animation-delay: 1300ms;
+    animation-delay: 2050ms;
 }
 @keyframes slideUp {
     from {
@@ -84,51 +68,50 @@
     }
 }
 
-/* 메인 메뉴아이템 */
-.menuItem__thumb img {
-    width: 330px;
-    height: 323px;
-    /* max-width: 100%; */
-    /* height: auto; */
-    margin: 0 35px;
-    transition: all ease 300ms;
+/* 메뉴 아이템 */
+.main__menuItem {
+    display: block;
+    width: 100%;
+    height: 360px;
+    padding: 15px;
+    background: #f5f5f5;
+    text-align: center;
 }
-.main__menuList li:nth-child(3) img,
-.main__menuList li:nth-child(4) img {
-    width: 300px;
-    height: 293px;
-    /* max-width: 100%; */
-    /* height: auto; */
-    margin: 15px 50px 0 50px;
+.menuItem__img {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+.menuItem__thumb img {
+    width: auto;
+    height: 100%;
+    transition: all ease 300ms;
 }
 .main__menuItem:hover img {
-    transform: scale(1.1);
-    transition: all ease 300ms;
+    transform: scale(1.07);
 }
 .menuItem__thumb figcaption {
     width: 100%;
-    margin-top: -10px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #464646;
-    text-align: center;
 }
 
 /* 메인 상세메뉴 */
 .main__menuDetail {
     display: none;
     position: absolute;
-    top: 0;
-    width: 400px;
-    height: 361px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
     border: 1px solid #eeeeee;
     background: rgba(255, 255, 255, 0.712);
-    cursor: auto;
 }
 .menuDetail__title {
     margin: 40px 20px 20px 20px;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 1.8rem;
     color: #202022;
     border-bottom: 2px solid #202023;
 }
@@ -136,54 +119,45 @@
     display: block;
     padding-bottom: 20px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #737373;
 }
 .menuDetail__txt {
     margin: 0 20px;
-    font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #000000;
 }
 .menuDetail__desc {
     position: absolute;
     bottom: 0;
-    padding: 15px 40px;
-    height: 92px;
+    width: 100%;
+    padding: 15px 0;
     font-size: 0;
     background-color: #f8f8f8;
 }
+.menuDetail__desc dt, .menuDetail__desc dd {
+    display: inline-block;
+    width: 25%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 1.3rem;
+}
 .menuDetail__desc dt {
-    display: inline-block;
-    width: 25%;
-    font-size: 13px;
+    padding-left: 20px;
 }
-.menuDetail__desc dd {
-    display: inline-block;
-    width: 25%;
-    font-size: 13px;
-}
-dt:nth-child(3), dd:nth-child(4), 
-dt:nth-child(7), dd:nth-child(8),
-dt:nth-child(11), dd:nth-child(12) {
-    padding-left: 25px;
-}
-dt:nth-child(3),
-dt:nth-child(7),
-dt:nth-child(11) {
+dt:nth-child(4n-1) {
     border-left: 1px solid #737373;
 }
 .menuDetail__btnClosed {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 50px;
     height: 50px;
     padding-left: 50px;
     background: url(../images/detail-close.gif) no-repeat;
     background-position: 50% 50%;
     overflow: hidden;
-    cursor: pointer;
 }
 .menuDetail__btnClosed:hover {
     background-color: #f5f5f5;
