@@ -3,9 +3,9 @@
 /* 헤더 */
 .header {
     position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     border-bottom: 1px solid #E0E0E0;
     background: rgba(255, 255, 255, 0.4);
@@ -97,7 +97,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(11, 18, 40, 0.9);
+    background: hsla(225, 57%, 10%, 0.9);
     z-index: 110;
 }
 .nav__mainNav {
@@ -110,6 +110,10 @@
     font-size: 1.6rem;
     color: #fff;
     border-bottom: 1px solid rgba(33, 55, 120, 0.5);
+    transition: all ease 400ms;
+}
+.nav__mainNav a:hover, .nav__mainNav a:focus {
+    background-color: #2e437c;
 }
 .nav__btnClosed {
     position: absolute;

@@ -2,8 +2,8 @@
 @import url(./nav.css);
 
 html {
-    font-size: 10px;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
     letter-spacing: -0.0025em;
 }
 body {
@@ -65,26 +65,9 @@ img {
     clear: both;
 }
 ::selection {
-    background: #2e437c;
     color: #fff;
+    background: #2e437c;
 }
 .container {
     padding: 90px 0;
 }
-/* css 작성 순서
-1.	display, visible
-2.	float
-3.	position
-4.	width, height
-5.	margin, padding
-6.	font (font-weight, font-size…)
-7.	color, line-height, word, vertical-align
-8.	text (text-indent, text-decoration..)
-9.	border
-10.	background
-11.	overflow
-12.	opacity
-13.	box (box-sizing, box-shadow)
-14.	z-index
-15.	transition
-16.	animation */
