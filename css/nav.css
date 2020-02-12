@@ -23,26 +23,61 @@
     position: fixed;
     width: 100%;
     height: 67px;
-    background-color: turquoise;
-    /* background: rgba(255, 255, 255, 0.4); */
+    left: 0px;
+    top: 0px;
+    border-bottom: 1px solid #E0E0E0;
+    background: rgba(255, 255, 255, 0.4);
+
 }
 
 /* 이디야 로고 */
 .header__brandName {
     float: left;
-    padding-top: 26px;
-    padding-left: 26px;
     width: 200px;
     height: 20px;
+    padding-top: 26px;
+    padding-left: 26px;
+    animation-name: brandName;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+
+    animation-fill-mode: forwards;
 }
+@keyframes brandName {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(13px);
+    }
+}
+
 /* // 이디야 로고 */
 
 /* 햄버거 버튼 */
 .header__btnBurger {
     float: right;
-    padding-right: 20px;
-    padding-top: 20px;
+    width: 67px;
+    height: 67px;
     cursor: pointer;
+    animation-name: btnBurger;
+    animation-duration: .35s;
+    animation-direction: reverse;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+@keyframes btnBurger {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(-5px);
+    }
+}
+.header__btnBurger:active {
+    border: 1px solid blue;
+    background-color: #e1e1e1;
+
 }
 /* // 햄버거 버튼 */
 
@@ -50,16 +85,50 @@
 .nav {
     position: fixed;
     width: 100%;
+    height: 1654px;
     background: rgba(11, 18, 40, 0.9);
+    /* display: none; */
 }
 .nav__mainNav {
     padding-top: 73px;
-    padding-left: 16px;
+    padding-left: 0;
+}
+.nav__mainNav li {
+    width: 1440px;
+    border-bottom: 1px solid rgba(33, 55, 120, 0.5);
 }
 .nav__mainNav li a {
-    border: 1px solid rgba(33, 55, 120, 0.5);
+    width: 30px;
+    height: 23px;
+    padding-left: 16px;
+    line-height: 51px;
     color: #fff;
-
 }
-
-
+.nav__btnClosed {
+    position: absolute;
+    right: 49px;
+    top: 49px;
+    width: 28px;
+    cursor: pointer;
+}
+.nav__btnClosed:active {
+    outline: 1px solid blue;
+    width: 45px;
+    height: 45px;
+}    
+.nav__btnClosed span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 6px;
+    margin-top: -3px;
+    background: #fff;
+}
+.positionSlash {
+    transform: rotate(45deg);
+}
+.positionBackslash {
+    transform: rotate(135deg);
+}
+/* // 내비게이션 */
