@@ -57,7 +57,10 @@ a {
     display: block;
     clear: both;
 }
-
+::selection {
+    background: #2e437c;
+    color: #fff;
+}
 
 /* css 작성 순서
 1.	display, visible
