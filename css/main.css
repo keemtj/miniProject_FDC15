@@ -17,3 +17,84 @@
 14.	z-index
 15.	transition
 16.	animation */
+
+.container {
+
+}
+
+/* 메인 */
+.main {
+    
+}
+
+/* 메인 메뉴리스트 */
+.main__menuList {
+    display: flex;
+    flex-flow: row wrap;
+    width: 840px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 62px;
+    
+}
+.main__menuList li{
+    position: relative;
+    width: 400px;
+    height: 361px;
+    margin: 5px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+/* 메인 메뉴아이템 */
+.main__menuItem {
+    
+}
+.menuItem__thumb {
+    
+}
+.menuItem__thumb img {
+    width: 330px;
+    height: 323px;
+    margin: 0 35px;
+    transition: all ease 0.3s;
+}
+.main__menuList li:nth-child(3) img,
+.main__menuList li:nth-child(4) img {
+    width: 300px;
+    height: 293px;
+    margin: 15px 50px 0 50px;
+}
+.main__menuItem:hover img {
+    transform: scale(1.1);
+    transition: all ease 0.3s;
+}
+.menuItem__thumb figcaption {
+    position: absolute;
+    top: 315px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    color: #464646;
+    text-align: center;
+}
+
+/* 메인 상세메뉴 */
+.main__menuDetail {
+    display: none;
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, 0.4);
+}
+.menuDetail__title {
+
+}
+.menuDetail__txt {
+
+}
+.menuDetail__desc {
+
+}
+.menuDetail__btnClosed {
+
+}
