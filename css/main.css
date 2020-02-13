@@ -1,19 +1,186 @@
-@charset "utf-8";
+/* 메인 */
 
-/* css 작성 순서
-1.	display, visible
-2.	float
-3.	position
-4.	width, height
-5.	margin, padding
-6.	font (font-weight, font-size…)
-7.	color, line-height, word, vertical-align
-8.	text (text-indent, text-decoration..)
-9.	border
-10.	background
-11.	overflow
-12.	opacity
-13.	box (box-sizing, box-shadow)
-14.	z-index
-15.	transition
-16.	animation */
+/* 메인 메뉴리스트 */
+.main__menuList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+.main__menuList li {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    max-width: 410px;
+    padding: 5px;
+    animation-name: slideUp;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+@media ( max-width: 559px ) {
+    .main__menuList li {
+        width: 100%;
+    }
+}
+@media (min-width:560px) and (max-width:840px) {
+    .main__menuList li {
+        width: 50%;
+    }
+}
+.main__menuList li:nth-child(1) {
+    animation-delay: 900ms;
+}
+.main__menuList li:nth-child(2) {
+    animation-delay: 1050ms;
+}
+.main__menuList li:nth-child(3) {
+    animation-delay: 1200ms;
+}
+.main__menuList li:nth-child(4) {
+    animation-delay: 1350ms;
+}
+.main__menuList li:nth-child(5) {
+    animation-delay: 1500ms;
+}
+.main__menuList li:nth-child(6) {
+    animation-delay: 1650ms;
+}
+.main__menuList li:nth-child(7) {
+    animation-delay: 1800ms;
+}
+.main__menuList li:nth-child(8) {
+    animation-delay: 1950ms;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 메뉴 아이템 */
+.main__menuItem {
+    display: block;
+    width: 100%;
+    height: 360px;
+    padding: 15px;
+    text-align: center;
+    background: #f5f5f5;
+}
+.menuItem__thumb img {
+    max-width: 100%;
+    height: 300px;
+    transition: all ease 300ms;
+}
+.main__menuItem:hover img {
+    transform: scale(1.07);
+}
+.menuItem__thumb figcaption {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #464646;
+}
+
+/* 메인 상세메뉴 */
+.main__menuDetail {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border: 1px solid #eeeeee;
+    background: rgba(255, 255, 255, 0.712);
+    animation-name: popDown;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+.main__menuDetail--active {
+    display: block;
+    opacity: 1;
+    transition: all .9s ease;
+    animation-name: popUp;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+@keyframes popUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes popDown {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.menuDetail__title {
+    margin: 40px 20px 20px 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #202022;
+    border-bottom: 2px solid #202023;
+}
+.menuDetail__title span {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #737373;
+}
+.menuDetail__txt {
+    margin: 0 20px;
+    font-size: 1.6rem;
+    color: #000000;
+}
+.menuDetail__desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 0;
+    background-color: #f8f8f8;
+}
+.menuDetail__desc dt, .menuDetail__desc dd {
+    display: inline-block;
+    width: 25%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 1.3rem;
+}
+.menuDetail__desc dt {
+    padding-left: 20px;
+}
+dt:nth-child(4n-1) {
+    border-left: 1px solid #737373;
+}
+.menuDetail__btnClosed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    padding-left: 50px;
+    background: url(../images/detail-close.gif) no-repeat;
+    background-position: 50% 50%;
+    overflow: hidden;
+}
+.menuDetail__btnClosed:hover {
+    background-color: #f5f5f5;
+    transition: all ease 400ms;
+}

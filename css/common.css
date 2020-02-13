@@ -1,17 +1,24 @@
-@charset "utf-8";
 @import url(./nav.css);
 
 html {
-    font-size: 10px;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+    letter-spacing: -0.0025em;
 }
 body {
+    margin: 0;
+    padding: 0;
     font-size: 1.6rem;
+    line-height: 1.5;
+}
+body * {
+    box-sizing: border-box;
 }
 
 /* reset */
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+    padding: 0;
 }
 ul, ol {
     margin:0;
@@ -32,10 +39,14 @@ button {
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
 }
 a {
     text-decoration: none;
     color: inherit;
+}
+img {
+    vertical-align: top;
 }
 
 /* common style */
@@ -47,27 +58,15 @@ a {
     clip-path: polygon(0, 0);
     overflow: hidden;
 }
-.clearfix {
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
-
-
-/* css 작성 순서
-1.	display, visible
-2.	float
-3.	position
-4.	width, height
-5.	margin, padding
-6.	font (font-weight, font-size…)
-7.	color, line-height, word, vertical-align
-8.	text (text-indent, text-decoration..)
-9.	border
-10.	background
-11.	overflow
-12.	opacity
-13.	box (box-sizing, box-shadow)
-14.	z-index
-15.	transition
-16.	animation */
+::selection {
+    color: #fff;
+    background: #2e437c;
+}
+.container {
+    padding: 90px 0;
+}
