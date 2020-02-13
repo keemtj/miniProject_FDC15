@@ -17,12 +17,12 @@
 }
 @keyframes headerIn {
     0% {
-        transform: translateY(-100px);
         opacity: 0;
+        transform: translateY(-100px);
     }
     100% {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -41,12 +41,12 @@
 
 @keyframes brandName {
     0% {
-        transform: translateX(-250px);
         opacity: 0;
+        transform: translateX(-250px);
     }
     100% {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateX(0);
     }
 }
 .header__brandName a {
@@ -69,12 +69,12 @@
 }
 @keyframes btnBurger {
     0% {
-        transform: translateX(67px);
         opacity: 0;
+        transform: translateX(67px);
     }
     100% {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateX(0);
     }
 }
 .header__btnBurger:hover {
