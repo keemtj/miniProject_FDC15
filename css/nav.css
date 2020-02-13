@@ -89,7 +89,7 @@
 
 /* 내비게이션 */
 .nav {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
@@ -99,21 +99,12 @@
     height: 100vh;
     background: hsla(225, 57%, 10%, 0.9);
     z-index: 110;
+    transform: translateX(100vw);
+    transition: all ease 400ms;
 }
 .nav--active {
-    display: block;
-    animation-name: rightSlide;
-    animation-duration: .8s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: both;
-}
-@keyframes rightSlide {
-    from {
-        
-    }
-    to {
-        
-    }
+    transform: translateX(0);
+    transition: all ease 400ms;
 }
 .nav__mainNav {
     padding-top: 70px;
@@ -133,7 +124,7 @@
 .nav__btnClosed {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     width: 67px;
     height: 67px;
 }
