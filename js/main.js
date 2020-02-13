@@ -21,13 +21,6 @@ function detailUp(e) {
 
 for(let i = 0; i < closeBtns.length; i++){
     let btns = closeBtns[i];
-    btns.addEventListener('click', btnClosed);
+    // console.log(menuDetails[i]);
+    btns.addEventListener('click', function() {menuDetails[i].classList.remove('main__menuDetail--active')});
 }
-
-function btnClosed() {
-    // let _this = e.target;
-    // let _parent = _this.querySelectorAll('.main__menuDetail--active')
-    menuDetails.classList.remove('main__menuDetail--active');
-}
-
-
