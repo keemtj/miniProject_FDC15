@@ -89,7 +89,7 @@
 
 /* 내비게이션 */
 .nav {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -99,12 +99,21 @@
     height: 100vh;
     background: hsla(225, 57%, 10%, 0.9);
     z-index: 110;
-    transform: translateX(100vw);
-    transition: all ease 400ms;
 }
 .nav--active {
-    transform: translateX(0);
-    transition: all ease 400ms;
+    display: block;
+    animation-name: slideIn;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 .nav__mainNav {
     padding-top: 70px;
