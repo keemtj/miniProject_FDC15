@@ -19,3 +19,4 @@ function navClosed() {
 }
 
 navbtnClosed.addEventListener('click', navClosed);
+ 
