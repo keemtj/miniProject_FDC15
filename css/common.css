@@ -1,0 +1,72 @@
+@import url(./header.css);
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+    letter-spacing: -0.0025em;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+body * {
+    box-sizing: border-box;
+}
+
+/* reset */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+dd {
+    margin-left: 0;
+}
+figure {
+    margin: 0;
+}
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    vertical-align: top;
+}
+
+/* common style */
+.a11yHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0);
+    clip-path: polygon(0, 0);
+    overflow: hidden;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+::selection {
+    color: #fff;
+    background: #2e437c;
+}
+.container {
+    padding: 90px 0;
+}
